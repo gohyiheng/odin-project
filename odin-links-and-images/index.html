@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> Links and images </title>
+    </head>
+    
+    <body>
+        <h1> Links and images</h1>
+
+        <!-- <a>Click me</a> anchor elements are used to create links -->
+
+        <!-- Absolute links, links to other pages on the internet-->
+        <a href = "https://www.theodinproject.com/about">Click me</a> <!-- href are used to specify where the link will take us, anchor element without href would not redirect us anywhere-->
+        <p></p>
+        <a href = "https://www.theodinproject.com/about" target="_blank" rel = "noopener noreferrer"> Redirection</a>
+        <!-- target specifies where the link should be opened, _blank - new window/tab, _self - redirect in same window, _parent - parent frame, _top - full body of window-->
+        <!-- rel attribute are used for security reasons,noopener prevents opened link from gaining access to the webpage which it was opened from
+        noreferrer prevents opened link form knowing which webpage/resouce has a link to it-->
+
+        <!-- Relative links, links to other webpage in your own website-->
+        <p></p>
+        <a href="linked.html">link to another page on the same website</a>
+        <!-- relative link, path would be the path to the place where the other site code is stored-->
+        <br>
+        <a href="/HTML-boilerplate/index.html">link to the HTML bolierplate</a>
+
+        <br>
+        <img src="/odin-links-and-images/images/dog.jpg" alt="Dog image" height="300" width="300"> <!-- used to display an image on the webpage, alt provides a text description in the event where the image is not able to be loaded-->
+    </body>
+</html>
