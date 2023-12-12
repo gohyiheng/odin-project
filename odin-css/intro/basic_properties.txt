@@ -1,0 +1,27 @@
+color: sets text color
+background-color: sets background color
+-> accepts acutal color names, HEX, RGB, HSL
+
+------------------------------------------
+
+font-family: single value, comma separated list of values
+    -> font family like "Times New Roman"
+            -> "" are used due to white space between words
+    -> generic family like serif
+    -> a browser will use the next one in the list if it does not support the first font, thus it is recommended to use a generic font family as fallback
+
+font-size: sets size of fonts, e.g. 22px
+
+font-weight: affects boldness of the text, assuming that the font supports the boldness.
+    -> value can be a keyword or number between 1-1000 
+        -> e.g. bold
+        -> 700 = bold 
+
+text-align: aligns the text with an element
+    -> e.g. center
+
+------------------------------------------  
+
+height & width: 
+    -> default would be original image specifications.
+    -> auto allows for changing either the height or width while keeping the proportions.
