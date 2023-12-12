@@ -7,4 +7,76 @@ Selectors
         * {
             color: red;
         }
-        *** this means that every element would have the 'color: red;' applied to it
+
+        *** this means that every element would have the 'color: red;' applied to it ***
+
+    -> Type 
+        -> Select element of the given type: for example <div>
+
+        <div>Hello, World!</div>
+        <p>Hi...</p>
+        <div>Okay, bye.</div>
+
+        -> Example
+        div {
+            color: red;
+        }
+
+        *** this means that every div would have the 'color: red;' applied to it while the <p> element would not have anything applied to it ***
+
+    -> Class
+        -> Select elements of a given Class
+
+        <div class="alert-text">Please agree to our terms of service.</div>
+
+        -> Example
+        .alert-text {
+            color: red;
+        }
+
+        *** Syntax: uses a '.' followed by case-sensitive value of the class attribute. Able to assign multiple classes to a single element:  class="alert-text severe-alert" ***
+
+    -> ID 
+        -> Similar to class selector, however there can only be one ID 
+
+        <div id="title">The odin project</div>
+
+        -> Example
+        #title {
+            color: red;
+        }
+
+        *** Syntax: uses a '#' followed by the case-sensitive value of ID. Use ID only when needed/sparingly ***
+
+    -> Grouping
+        -> when there are multiple elements that share some of their style declarations, we can group them via using a comma and newline.
+
+        .read,
+        .unread {
+            color: red;
+        }
+
+        .read {
+            /* other unique declarations */
+        }
+
+        .unread {
+            /* other unique declarations */
+        }
+
+    -> Chaining Selectors
+        -> able to chain classes as well as classes and id
+
+        -> example
+        <div class="subsection header">Latest Posts</div>
+        <p class="subsection" id="preview">preview a post.</p>
+
+        .subsection.header {
+            color: red;
+        }
+
+        .subsection#preview {
+            color: blue;
+        }
+
+        *** In general, can only chain up to one other type selector since an element cannot be two different types at once, such as chaining div and p ***        
