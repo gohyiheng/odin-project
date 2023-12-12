@@ -4,24 +4,26 @@ Selectors
         -> Syntax: *
 
         -> Example
+        ------------------------------------------
         * {
             color: red;
         }
-
+        ------------------------------------------
         *** this means that every element would have the 'color: red;' applied to it ***
 
     -> Type 
         -> Select element of the given type: for example <div>
 
+        -> Example
+        ------------------------------------------
         <div>Hello, World!</div>
         <p>Hi...</p>
         <div>Okay, bye.</div>
-
-        -> Example
+        ------------------------------------------
         div {
             color: red;
         }
-
+        ------------------------------------------
         *** this means that every div would have the 'color: red;' applied to it while the <p> element would not have anything applied to it ***
 
     -> Class
@@ -30,27 +32,31 @@ Selectors
         <div class="alert-text">Please agree to our terms of service.</div>
 
         -> Example
+        ------------------------------------------
         .alert-text {
             color: red;
         }
-
+        ------------------------------------------
         *** Syntax: uses a '.' followed by case-sensitive value of the class attribute. Able to assign multiple classes to a single element:  class="alert-text severe-alert" ***
 
     -> ID 
         -> Similar to class selector, however there can only be one ID 
 
-        <div id="title">The odin project</div>
-
         -> Example
+        ------------------------------------------
+        <div id="title">The odin project</div>
+        ------------------------------------------
         #title {
             color: red;
         }
-
+        ------------------------------------------
         *** Syntax: uses a '#' followed by the case-sensitive value of ID. Use ID only when needed/sparingly ***
 
     -> Grouping
         -> when there are multiple elements that share some of their style declarations, we can group them via using a comma and newline.
 
+        -> Example
+        ------------------------------------------
         .read,
         .unread {
             color: red;
@@ -63,14 +69,16 @@ Selectors
         .unread {
             /* other unique declarations */
         }
-
+        ------------------------------------------
+        
     -> Chaining Selectors
         -> able to chain classes as well as classes and id
 
         -> example
+        ------------------------------------------
         <div class="subsection header">Latest Posts</div>
         <p class="subsection" id="preview">preview a post.</p>
-
+        ------------------------------------------
         .subsection.header {
             color: red;
         }
@@ -78,5 +86,25 @@ Selectors
         .subsection#preview {
             color: blue;
         }
+        ------------------------------------------
+        *** In general, can only chain up to one other type selector since an element cannot be two different types at once, such as chaining div and p ***       
 
-        *** In general, can only chain up to one other type selector since an element cannot be two different types at once, such as chaining div and p ***        
+    -> Descendant combinator
+        -> represented in CSS by a single space between Selectors
+            -> only cause elements that match the last selector to be selected if they also have an ancestor that matches the previous selector 
+
+            -> Example
+            ------------------------------------------
+             <div class="ancestor">
+                <div class="child">
+                    <div class="child"></div>
+                </div>
+            </div>
+
+            <div class="child"></div>
+            ------------------------------------------
+            .ancestor .child {
+                color: blue;
+            }
+            ------------------------------------------
+            *** only the child classes which are nested in the ancestor classes would have the CSS applied to it, the child class which is not nested inside the ancestor class would not have anything applied to it  ***        
