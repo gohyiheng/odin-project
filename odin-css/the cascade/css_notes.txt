@@ -1,0 +1,7 @@
+Specificity
+    -> more specific and take precedence 
+    -> Inline 
+        -> Selectors
+            -> ID - Class - Type
+
+    -> Taken into account when an element has multiple confliciting declarations targeting it
