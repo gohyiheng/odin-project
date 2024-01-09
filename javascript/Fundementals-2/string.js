@@ -90,3 +90,44 @@ let textTrimEnd = text5.trimEnd();
 console.log("String trim end: " + textTrimEnd);
 
 // padding
+/* 
+padStart - pad from start of string
+padEnd - pad from end of string
+*/
+//padstart
+let text6 = '5'
+let textPadStart = text6.padStart(4, "0"); // specifies length of string and what to pad with
+console.log("String pad start: " + textPadStart);
+
+//padEnd
+let textPadEnd = text6.padEnd(4, "0"); // specifies length of string and what to pad with
+console.log("String pad end: " + textPadEnd);
+
+/*repeat
+- returns copies of said string
+- returns new string
+- does not change original string
+*/
+let textRepeat = text6.repeat(5);
+console.log("String repeat 5 times: " + textRepeat);
+
+// replacing string
+let text7 = "I am groot am";
+let newText = text7.replace("am", "am not");
+console.log("Replace am with am not: " + newText);
+/*
+replaces only the first match
+    -> replace all using /g flag
+replace is case sensitive
+    -> able to use regex with /i flag /AM/i
+*/
+let textReplaceAll = text7.replace(/AM/ig, "am not");
+console.log("Replace am with am not: " + textReplaceAll);
+
+// replaceAll - allows for regular expression instead of a string to be replaced
+let replaceAll = text7.replaceAll(/AM/ig, "what");
+console.log("Replace all am with am not: " + replaceAll);
+
+// split
+let textSplitSpaces = text7.split(" ");
+console.log("split text on space: " + textSplitSpaces);
